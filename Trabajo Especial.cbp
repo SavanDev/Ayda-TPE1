@@ -32,9 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="headers/Fila.h" />
-		<Unit filename="headers/Lista.h" />
+		<Unit filename="include/Fila.h" />
+		<Unit filename="include/Lista.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Fila.cpp" />
+		<Unit filename="src/Lista.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
