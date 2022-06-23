@@ -31,6 +31,8 @@ private:
     // Para las funciones agregarPrimero y agregarFinal
     Nodo * primero;
     Nodo * ultimo;
+
+    void moverIndice(const int i);
 }
 
 #endif // LISTA

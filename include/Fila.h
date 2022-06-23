@@ -7,10 +7,10 @@ class Fila
 public:
     Fila();
     ~Fila();
-    void agregarFila(const T & elemento);
-    void eliminarFila();
-    bool vaciaFila() const;
-    unsigned int longFila() const;
+    void agregar(const T & elemento);
+    void eliminarPrimero();
+    bool esVacia() const;
+    unsigned int longitud() const;
     const T & consultarElemento() const;
 private:
     unsigned int cantidadElementos;
