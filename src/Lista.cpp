@@ -1,4 +1,5 @@
-#include "Lista.h"
+#include <cstddef>
+#include "../include/Lista.h"
 
 template <typename T>
 Lista<T>::Lista()
@@ -20,12 +21,12 @@ template <typename T>
 void Lista<T>::agregar(int i, const T &elemento)
 {
     Nodo *nuevoNodo = new Nodo;
-    nuevoNodo->elemento = elemento;
+    nuevoNodo.elemento = elemento;
 
     if (this->actual == NULL && i == 1) // Primer elemento de la lista
     {
-        nuevoNodo->anterior = NULL;
-        nuevoNodo->siguiente = NULL;
+        nuevoNodo.anterior = NULL;
+        nuevoNodo.siguiente = NULL;
         this->actual = nuevoNodo;
         this->indiceActual = 1;
 
@@ -34,15 +35,15 @@ void Lista<T>::agregar(int i, const T &elemento)
     }
     else if (i == 1) // Agrega al principio
     {
-        nuevoNodo->siguiente = this->primero;
-        nuevoNodo->anterior = NULL;
+        nuevoNodo.siguiente = this->primero;
+        nuevoNodo.anterior = NULL;
         this->primero->anterior = nuevoNodo;
         this->primero = nuevoNodo;
     }
     else if (i == longitud() + 1) // Agrega al final
     {
-        nuevoNodo->anterior = this->ultimo;
-        nuevoNodo->siguiente = NULL;
+        nuevoNodo.anterior = this->ultimo;
+        nuevoNodo.siguiente = NULL;
         this->ultimo->siguiente = nuevoNodo;
         this->ultimo = nuevoNodo;
     }
@@ -50,8 +51,8 @@ void Lista<T>::agregar(int i, const T &elemento)
     {
         moverIndice(i);
 
-        nuevoNodo->siguiente = this->actual;
-        nuevoNodo->anterior = this->actual->anterior;
+        nuevoNodo.siguiente = this->actual;
+        nuevoNodo.anterior = this->actual->anterior;
         this->actual->anterior = nuevoNodo;
         this->actual = nuevoNodo;
     }

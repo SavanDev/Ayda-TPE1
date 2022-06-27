@@ -1,4 +1,5 @@
-#include "Fila.h"
+#include <cstddef>
+#include "../include/Fila.h"
 
 template <typename T>
 Fila<T>::Fila()
@@ -20,17 +21,17 @@ template <typename T>
 void Fila<T>::agregar(const T & elemento)
 {
     Nodo *nuevoNodo = new Nodo;
-    nuevoNodo->elemento = elemento;
+    nuevoNodo.elemento = elemento;
 
     if (this->primero == NULL)
     {
-        nuevoNodo->siguiente = NULL;
+        nuevoNodo.siguiente = NULL;
         this->primero = nuevoNodo;
     }
     else
     {
         Nodo *aux = this->primero;
-        nuevoNodo->siguiente = aux;
+        nuevoNodo.siguiente = aux;
         this->primero = nuevoNodo;
     }
 

@@ -1,6 +1,3 @@
-#ifndef FILA
-#define FILA
-
 template <typename T>
 class Fila
 {
@@ -21,5 +18,3 @@ private:
     };
     Nodo * primero;
 };
-
-#endif // FILA

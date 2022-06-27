@@ -1,6 +1,3 @@
-#ifndef LISTA
-#define LISTA
-
 template <typename T>
 class Lista
 {
@@ -33,6 +30,4 @@ private:
     Nodo * ultimo;
 
     void moverIndice(const int i);
-}
-
-#endif // LISTA
+};

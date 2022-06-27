@@ -1,4 +1,16 @@
 # depslib dependency file v1.0
-1653797716 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/main.cpp
+1656251210 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/main.cpp
 	<iostream>
+
+1656251321 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/src/Fila.cpp
+	"../include/Fila.h"
+
+1656251364 /home/dylan/Documentos/TP TDA/Trabajo Especial/include/Fila.h
+	<cstddef>
+
+1656251332 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/src/Lista.cpp
+	"../include/Lista.h"
+
+1656251358 /home/dylan/Documentos/TP TDA/Trabajo Especial/include/Lista.h
+	<cstddef>
 
