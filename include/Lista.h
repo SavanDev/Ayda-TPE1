@@ -5,9 +5,9 @@ public:
     Lista();
     ~Lista();
     unsigned int longitud() const;
-    void agregar(const int i, const T & elemento);
-    void eliminar(const int i);
-    const T & obtenerElemento(const int i) const;
+    void agregar(unsigned int i, const T & elemento);
+    void eliminar(unsigned int i);
+    const T & obtenerElemento(unsigned int i);
     void agregarFinal(const T & elemento);
     void agregarPrimero(const T & elemento);
     bool esVacia() const;
@@ -22,12 +22,12 @@ private:
     };
 
     // La lista va a mantener el puntero a la última posición accedida
-    Nodo * actual;
+    Nodo *actual;
     unsigned int indiceActual;
 
     // Para las funciones agregarPrimero y agregarFinal
-    Nodo * primero;
-    Nodo * ultimo;
+    Nodo *primero;
+    Nodo *ultimo;
 
-    void moverIndice(const int i);
+    void moverIndice(const unsigned int i);
 };

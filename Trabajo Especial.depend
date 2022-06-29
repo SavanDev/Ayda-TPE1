@@ -1,16 +1,30 @@
 # depslib dependency file v1.0
-1656251210 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/main.cpp
+1656511620 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/main.cpp
 	<iostream>
+	"./include/Banco.h"
 
-1656251321 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/src/Fila.cpp
+1656346970 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/src/Fila.cpp
+	<cstddef>
 	"../include/Fila.h"
 
-1656251364 /home/dylan/Documentos/TP TDA/Trabajo Especial/include/Fila.h
-	<cstddef>
+1656251775 /home/dylan/Documentos/TP TDA/Trabajo Especial/include/Fila.h
 
-1656251332 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/src/Lista.cpp
+1656511162 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/src/Lista.cpp
 	"../include/Lista.h"
+	"../include/BancoTypes.h"
 
-1656251358 /home/dylan/Documentos/TP TDA/Trabajo Especial/include/Lista.h
-	<cstddef>
+1656511051 /home/dylan/Documentos/TP TDA/Trabajo Especial/include/Lista.h
+
+1655959511 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/src/Arbol.cpp
+
+1656508390 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/src/Banco.cpp
+	"../include/Banco.h"
+
+1656508526 /home/dylan/Documentos/TP TDA/Trabajo Especial/include/Banco.h
+	<iostream>
+	"Lista.h"
+	"BancoTypes.h"
+
+1656509517 /home/dylan/Documentos/TP TDA/Trabajo Especial/include/BancoTypes.h
+	<iostream>
 

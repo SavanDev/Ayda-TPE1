@@ -1,5 +1,5 @@
-#include <cstddef>
 #include "../include/Lista.h"
+#include "../include/BancoTypes.h"
 
 template <typename T>
 Lista<T>::Lista()
@@ -18,15 +18,15 @@ Lista<T>::~Lista()
 }
 
 template <typename T>
-void Lista<T>::agregar(int i, const T &elemento)
+void Lista<T>::agregar(unsigned int i, const T &elemento)
 {
     Nodo *nuevoNodo = new Nodo;
-    nuevoNodo.elemento = elemento;
+    nuevoNodo->elemento = elemento;
 
     if (this->actual == NULL && i == 1) // Primer elemento de la lista
     {
-        nuevoNodo.anterior = NULL;
-        nuevoNodo.siguiente = NULL;
+        nuevoNodo->anterior = NULL;
+        nuevoNodo->siguiente = NULL;
         this->actual = nuevoNodo;
         this->indiceActual = 1;
 
@@ -35,15 +35,15 @@ void Lista<T>::agregar(int i, const T &elemento)
     }
     else if (i == 1) // Agrega al principio
     {
-        nuevoNodo.siguiente = this->primero;
-        nuevoNodo.anterior = NULL;
+        nuevoNodo->siguiente = this->primero;
+        nuevoNodo->anterior = NULL;
         this->primero->anterior = nuevoNodo;
         this->primero = nuevoNodo;
     }
     else if (i == longitud() + 1) // Agrega al final
     {
-        nuevoNodo.anterior = this->ultimo;
-        nuevoNodo.siguiente = NULL;
+        nuevoNodo->anterior = this->ultimo;
+        nuevoNodo->siguiente = NULL;
         this->ultimo->siguiente = nuevoNodo;
         this->ultimo = nuevoNodo;
     }
@@ -51,8 +51,8 @@ void Lista<T>::agregar(int i, const T &elemento)
     {
         moverIndice(i);
 
-        nuevoNodo.siguiente = this->actual;
-        nuevoNodo.anterior = this->actual->anterior;
+        nuevoNodo->siguiente = this->actual;
+        nuevoNodo->anterior = this->actual->anterior;
         this->actual->anterior = nuevoNodo;
         this->actual = nuevoNodo;
     }
@@ -67,7 +67,7 @@ void Lista<T>::agregar(int i, const T &elemento)
 template <typename T>
 bool Lista<T>::esVacia() const
 {
-    return this->cantidadElementos == 0;
+    return this->cantidad == 0;
 }
 
 template <typename T>
@@ -89,7 +89,7 @@ unsigned int Lista<T>::longitud() const
 }
 
 template <typename T>
-void Lista<T>::eliminar(int i)
+void Lista<T>::eliminar(unsigned int i)
 {
     if (longitud() == 1 && i == 1) // Único elemento de la lista
     {
@@ -131,7 +131,7 @@ void Lista<T>::eliminar(int i)
 }
 
 template <typename T>
-const T & Lista<T>::obtenerElemento(const int i) const
+const T & Lista<T>::obtenerElemento(unsigned int i)
 {
     if (i == 1)
     {
@@ -147,11 +147,11 @@ const T & Lista<T>::obtenerElemento(const int i) const
     }
     else if (i > 1 && i < longitud())
     {
-        moverIndice(i);
+        this->moverIndice(i);
         return this->actual->elemento;
     }
     else
-        return NULL;
+        return this->ultimo->elemento;
 }
 
 template <typename T>
@@ -170,7 +170,7 @@ bool Lista<T>::existeEnLista(const T & elemento) const
 }
 
 template <typename T>
-void Lista<T>::moverIndice(const int i)
+void Lista<T>::moverIndice(const unsigned int i)
 {
     while (i != this->indiceActual)
     {
@@ -187,3 +187,5 @@ void Lista<T>::moverIndice(const int i)
         }
     }
 }
+
+template class Lista<Cliente>;

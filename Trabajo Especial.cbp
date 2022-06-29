@@ -33,10 +33,13 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Arbol.h" />
+		<Unit filename="include/Banco.h" />
+		<Unit filename="include/BancoTypes.h" />
 		<Unit filename="include/Fila.h" />
 		<Unit filename="include/Lista.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Arbol.cpp" />
+		<Unit filename="src/Banco.cpp" />
 		<Unit filename="src/Fila.cpp" />
 		<Unit filename="src/Lista.cpp" />
 		<Extensions />
