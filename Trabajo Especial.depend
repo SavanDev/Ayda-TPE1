@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1656511620 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/main.cpp
+1656515992 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/main.cpp
 	<iostream>
 	"./include/Banco.h"
 
@@ -17,14 +17,14 @@
 
 1655959511 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/src/Arbol.cpp
 
-1656508390 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/src/Banco.cpp
+1656517972 source:/home/dylan/Documentos/TP TDA/Trabajo Especial/src/Banco.cpp
 	"../include/Banco.h"
 
-1656508526 /home/dylan/Documentos/TP TDA/Trabajo Especial/include/Banco.h
+1656517888 /home/dylan/Documentos/TP TDA/Trabajo Especial/include/Banco.h
 	<iostream>
 	"Lista.h"
 	"BancoTypes.h"
 
-1656509517 /home/dylan/Documentos/TP TDA/Trabajo Especial/include/BancoTypes.h
+1656517892 /home/dylan/Documentos/TP TDA/Trabajo Especial/include/BancoTypes.h
 	<iostream>
 

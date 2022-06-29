@@ -11,7 +11,7 @@ public:
     void atenderCliente();
     void abrirColaEspecial();
     void cerrarCola(int cola);
-    void listarOperaciones();
+    void listarOperaciones(const int rangoMin, const int rangoMax);
     short colasEspecialesAbiertas();
 private:
     struct Criterio
@@ -34,4 +34,5 @@ private:
     Lista<Cliente> *atendidos;
 
     void reordenarClientes(ColaEspecial *colaDestino);
+    void mostrarCliente(Cliente c);
 };

@@ -65,6 +65,20 @@ void cerrarCola()
     }
 }
 
+void listarOperaciones()
+{
+    unsigned int montoMinimo;
+    unsigned int montoMaximo;
+
+    cout << "Ingrese el monto minimo para el listado:" << endl;
+    cout << ">> "; cin >> montoMinimo;
+
+    cout << "Ingrese el monto maximo para el listado:" << endl;
+    cout << ">> "; cin >> montoMaximo;
+
+    banco->listarOperaciones(montoMinimo, montoMaximo);
+}
+
 int main()
 {
     banco = new Banco();
@@ -81,15 +95,28 @@ int main()
         cout << ">> "; cin >> respuestaTerminal;
         cout << endl;
 
-        if (respuestaTerminal == 1)
-            ingresarCliente();
-
-        if (respuestaTerminal == 3)
-            banco->abrirColaEspecial();
-
-        if (respuestaTerminal == 4)
-            cerrarCola();
+        switch (respuestaTerminal)
+        {
+            case 1:
+                ingresarCliente();
+                break;
+            case 2:
+                banco->atenderCliente();
+                break;
+            case 3:
+                banco->abrirColaEspecial();
+                break;
+            case 4:
+                cerrarCola();
+                break;
+            case 5:
+                listarOperaciones();
+                break;
+            default:
+                break;
+        }
     }
+    delete banco;
 
     return 0;
 }
